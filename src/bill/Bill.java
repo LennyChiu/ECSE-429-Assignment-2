@@ -123,7 +123,7 @@ public class Bill
     BillState aBillState = billState;
     switch (aBillState)
     {
-      case inHouseOfCommons:    	  
+      case inHouseOfCommons:
         setBillStateInHouseOfCommons(BillStateInHouseOfCommons.secondReading);
         wasEventProcessed = true;
         break;
@@ -396,23 +396,27 @@ public class Bill
 //  private BillStateInHouseOfCommons billStateInHouseOfCommons;
 //  private BillStateInSenate billStateInSenate;
   
+  // Returns the BillState state as a string
   public String getBillState()
   {
     return billState.toString();
   }
   
+  // Returns the BillStateInHouseOfCommons state as a string
   public String getBillStateInHouseOfCommons()
   {
 	  return billStateInHouseOfCommons.toString();
   }
   
+  // Returns the BillStateInSenate state as a string
   public String getBillStateInSenate()
   {
 	  return billStateInSenate.toString();
   }
-  
-  public static void main(String[] args) {
-	Bill abill = new Bill();
-	System.out.println(abill.getBillState());
-  }
+
+  // main method
+//  public static void main(String[] args) {
+//	Bill abill = new Bill();
+//	System.out.println(abill.getBillState());
+//  }
 }
