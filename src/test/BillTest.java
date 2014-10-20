@@ -41,14 +41,20 @@ public class BillTest {
 		assertEquals("inPreparation", aBill.getBillState());
 		
 		//Sneak Paths
+		//Test ID 1.1
 		aBill.votePasses();
 		assertEquals("inPreparation", aBill.getBillState());
+		//Test ID 1.2
 		aBill.voteFails();
+		//Test ID 1.3
 		assertEquals("inPreparation", aBill.getBillState());
+		//Test ID 1.4
 		aBill.withdraw();
 		assertEquals("inPreparation", aBill.getBillState());
+		//Test ID 1.5
 		aBill.royalAssent();
 		assertEquals("inPreparation", aBill.getBillState());
+		//Test ID 1.6
 		aBill.modify();
 		assertEquals("inPreparation", aBill.getBillState());
 	}
@@ -66,16 +72,22 @@ public class BillTest {
 		assertEquals("withdrawn", aBill.getBillState());
 
 		//Sneak Paths
+		//Test ID 2.1
 		aBill.votePasses();
 		assertEquals("withdrawn", aBill.getBillState());
+		//Test ID 2.2
 		aBill.voteFails();
 		assertEquals("withdrawn", aBill.getBillState());
+		//Test ID 2.3
 		aBill.withdraw();
 		assertEquals("withdrawn", aBill.getBillState());
+		//Test ID 2.4
 		aBill.introduceInHouse();
 		assertEquals("withdrawn", aBill.getBillState());
+		//Test ID 2.5
 		aBill.introduceInSenate();
 		assertEquals("withdrawn", aBill.getBillState());
+		//Test ID 2.6
 		aBill.royalAssent();
 		assertEquals("withdrawn", aBill.getBillState());
 	}
