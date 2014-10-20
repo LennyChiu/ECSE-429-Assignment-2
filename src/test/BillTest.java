@@ -284,4 +284,315 @@ public class BillTest {
 		aBill.withdraw();
 		assertEquals("withdrawn", aBill.getBillState());
 	}
+	@Test
+	public void testcase16() {
+		//Conformance Test
+		Bill aBill = new Bill();
+		assertEquals("inPreparation", aBill.getBillState());
+		aBill.introduceInSenate();
+		assertEquals("firstReadingS", aBill.getBillStateInSenate());
+		aBill.votePasses();
+		assertEquals("secondReadingS", aBill.getBillStateInSenate());
+		aBill.votePasses();
+		assertEquals("committeeConsiderationS", aBill.getBillStateInSenate());
+		aBill.voteFails();
+		assertEquals("withdrawn", aBill.getBillState());
+	}
+	@Test
+	public void testcase17() {
+		//Conformance Test
+		Bill aBill = new Bill();
+		assertEquals("inPreparation", aBill.getBillState());
+		aBill.introduceInSenate();
+		assertEquals("firstReadingS", aBill.getBillStateInSenate());
+		aBill.votePasses();
+		assertEquals("secondReadingS", aBill.getBillStateInSenate());
+		aBill.votePasses();
+		assertEquals("committeeConsiderationS", aBill.getBillStateInSenate());
+		aBill.votePasses();
+		assertEquals("thirdReadingS", aBill.getBillStateInSenate());
+		aBill.withdraw();
+		assertEquals("withdrawn", aBill.getBillState());
+
+	}
+	
+	@Test
+	public void testcase18() {
+		//Conformance Test
+		Bill aBill = new Bill();
+		assertEquals("inPreparation", aBill.getBillState());
+		aBill.introduceInSenate();
+		assertEquals("firstReadingS", aBill.getBillStateInSenate());
+		aBill.votePasses();
+		assertEquals("secondReadingS", aBill.getBillStateInSenate());
+		aBill.votePasses();
+		assertEquals("committeeConsiderationS", aBill.getBillStateInSenate());
+		aBill.votePasses();
+		assertEquals("thirdReadingS", aBill.getBillStateInSenate());
+		aBill.voteFails();
+		assertEquals("withdrawn", aBill.getBillState());
+
+	}
+	@Test
+	public void testcase19() {
+		//Conformance Test
+		Bill aBill = new Bill();
+		assertEquals("inPreparation", aBill.getBillState());
+		aBill.introduceInSenate();
+		assertEquals("firstReadingS", aBill.getBillStateInSenate());
+		aBill.votePasses();
+		assertEquals("secondReadingS", aBill.getBillStateInSenate());
+		aBill.votePasses();
+		assertEquals("committeeConsiderationS", aBill.getBillStateInSenate());
+		aBill.votePasses();
+		assertEquals("thirdReadingS", aBill.getBillStateInSenate());
+		aBill.votePasses();
+		//error
+		assertEquals("firstReading", aBill.getBillState());
+
+	}
+	@Test
+	public void testcase20() {
+		//Conformance Test
+		Bill aBill = new Bill();
+		assertEquals("inPreparation", aBill.getBillState());
+		aBill.introduceInSenate();
+		assertEquals("firstReadingS", aBill.getBillStateInSenate());
+		aBill.votePasses();
+		assertEquals("secondReadingS", aBill.getBillStateInSenate());
+		aBill.votePasses();
+		assertEquals("committeeConsiderationS", aBill.getBillStateInSenate());
+		aBill.votePasses();
+		assertEquals("thirdReadingS", aBill.getBillStateInSenate());
+		aBill.votePasses();
+		//error
+		assertEquals("awaitingRoyalAssent", aBill.getBillState());
+
+	}
+	@Test
+	public void testcase21() {
+		//Sneak Test
+		Bill aBill = new Bill();
+		assertEquals("inPreparation", aBill.getBillState());
+		aBill.introduceInHouse();
+		assertEquals("firstReading", aBill.getBillStateInHouseOfCommons());
+		aBill.introduceInHouse();
+		assertEquals("firstReading", aBill.getBillStateInHouseOfCommons());
+		
+		aBill.introduceInSenate();
+		assertEquals("firstReading", aBill.getBillStateInHouseOfCommons());
+		
+		aBill.royalAssent();
+		assertEquals("firstReading", aBill.getBillStateInHouseOfCommons());
+
+		aBill.modify();
+		assertEquals("firstReading", aBill.getBillStateInHouseOfCommons());
+
+		
+	}
+	
+	@Test
+	public void testcase22() {
+		//Sneak Test
+		Bill aBill = new Bill();
+		assertEquals("inPreparation", aBill.getBillState());
+		aBill.introduceInHouse();
+		assertEquals("firstReading", aBill.getBillStateInHouseOfCommons());
+		aBill.votePasses();
+		assertEquals("secondReading", aBill.getBillStateInHouseOfCommons());
+		aBill.introduceInHouse();
+		assertEquals("secondReading", aBill.getBillStateInHouseOfCommons());
+		
+		aBill.introduceInSenate();
+		assertEquals("secondReading", aBill.getBillStateInHouseOfCommons());
+		
+		aBill.royalAssent();
+		assertEquals("secondReading", aBill.getBillStateInHouseOfCommons());
+
+		aBill.modify();
+		assertEquals("secondReading", aBill.getBillStateInHouseOfCommons());
+
+	}
+	@Test
+	public void testcase23() {
+		//Sneak Test
+		Bill aBill = new Bill();
+		assertEquals("inPreparation", aBill.getBillState());
+		aBill.introduceInHouse();
+		assertEquals("firstReading", aBill.getBillStateInHouseOfCommons());
+		aBill.votePasses();
+		assertEquals("secondReading", aBill.getBillStateInHouseOfCommons());
+		aBill.votePasses();
+		assertEquals("committeeConsideration", aBill.getBillStateInHouseOfCommons());
+		
+		aBill.introduceInSenate();
+		assertEquals("committeeConsideration", aBill.getBillStateInHouseOfCommons());
+		
+		aBill.royalAssent();
+		assertEquals("committeeConsideration", aBill.getBillStateInHouseOfCommons());
+
+		aBill.modify();
+		assertEquals("committeeConsideration", aBill.getBillStateInHouseOfCommons());
+
+	}
+	
+	@Test
+	public void testcase24() {
+		//Sneak Test
+		Bill aBill = new Bill();
+		assertEquals("inPreparation", aBill.getBillState());
+		aBill.introduceInHouse();
+		assertEquals("firstReading", aBill.getBillStateInHouseOfCommons());
+		aBill.votePasses();
+		assertEquals("secondReading", aBill.getBillStateInHouseOfCommons());
+		aBill.votePasses();
+		assertEquals("committeeConsideration", aBill.getBillStateInHouseOfCommons());
+		aBill.votePasses();
+		assertEquals("thirdReading", aBill.getBillStateInHouseOfCommons());
+
+		aBill.introduceInSenate();
+		assertEquals("thirdReading", aBill.getBillStateInHouseOfCommons());
+		
+		aBill.royalAssent();
+		assertEquals("thirdReading", aBill.getBillStateInHouseOfCommons());
+
+		aBill.modify();
+		assertEquals("thirdReading", aBill.getBillStateInHouseOfCommons());
+
+	}
+	
+	@Test
+	public void testcase25() {
+		//Sneak Test
+		Bill aBill = new Bill();
+		assertEquals("inPreparation", aBill.getBillState());
+		aBill.introduceInHouse();
+		assertEquals("firstReading", aBill.getBillStateInHouseOfCommons());
+		aBill.votePasses();
+		assertEquals("secondReading", aBill.getBillStateInHouseOfCommons());
+		aBill.votePasses();
+		assertEquals("committeeConsideration", aBill.getBillStateInHouseOfCommons());
+		aBill.votePasses();
+		assertEquals("thirdReading", aBill.getBillStateInHouseOfCommons());
+		aBill.votePasses();
+		assertEquals("awaitingRoyalAssent", aBill.getBillStateInHouseOfCommons());
+
+		aBill.votePasses();
+		assertEquals("awaitingRoyalAssent", aBill.getBillStateInHouseOfCommons());
+		
+		aBill.voteFails();
+		assertEquals("awaitingRoyalAssent", aBill.getBillStateInHouseOfCommons());
+
+		aBill.withdraw();
+		assertEquals("awaitingRoyalAssent", aBill.getBillStateInHouseOfCommons());
+
+		aBill.introduceInHouse();
+		assertEquals("awaitingRoyalAssent", aBill.getBillStateInHouseOfCommons());
+
+		aBill.introduceInSenate();
+		assertEquals("awaitingRoyalAssent", aBill.getBillStateInHouseOfCommons());
+
+		aBill.modify();
+		assertEquals("awaitingRoyalAssent", aBill.getBillStateInHouseOfCommons());
+
+	}
+	
+	@Test
+	public void testcase26() {
+		//Sneak Test
+		Bill aBill = new Bill();
+		assertEquals("inPreparation", aBill.getBillState());
+		aBill.introduceInSenate();
+		assertEquals("firstReadingS", aBill.getBillStateInSenate());
+		aBill.introduceInHouse();
+		assertEquals("firstReadingS", aBill.getBillStateInSenate());
+
+		aBill.introduceInSenate();
+		assertEquals("firstReadingS", aBill.getBillStateInSenate());
+
+		aBill.royalAssent();
+		assertEquals("firstReadingS", aBill.getBillStateInSenate());
+
+		aBill.modify();
+		assertEquals("firstReadingS", aBill.getBillStateInSenate());
+
+		
+	}
+	@Test
+	public void testcase27() {
+		//Sneak Test
+		Bill aBill = new Bill();
+		assertEquals("inPreparation", aBill.getBillState());
+		aBill.introduceInSenate();
+		assertEquals("firstReadingS", aBill.getBillStateInSenate());
+		aBill.votePasses();
+		assertEquals("secondReadingS", aBill.getBillStateInSenate());
+		aBill.introduceInHouse();
+		assertEquals("secondReadingS", aBill.getBillStateInSenate());
+
+		aBill.introduceInSenate();
+		assertEquals("secondReadingS", aBill.getBillStateInSenate());
+
+		aBill.royalAssent();
+		assertEquals("secondReadingS", aBill.getBillStateInSenate());
+
+		aBill.modify();
+		assertEquals("secondReadingS", aBill.getBillStateInSenate());
+
+	}
+	
+	@Test
+	public void testcase28() {
+		//Sneak Test
+		Bill aBill = new Bill();
+		assertEquals("inPreparation", aBill.getBillState());
+		aBill.introduceInSenate();
+		assertEquals("firstReadingS", aBill.getBillStateInSenate());
+		aBill.votePasses();
+		assertEquals("secondReadingS", aBill.getBillStateInSenate());
+		aBill.votePasses();
+		assertEquals("committeeConsiderationS", aBill.getBillStateInSenate());
+		aBill.introduceInHouse();
+		assertEquals("committeeConsiderationS", aBill.getBillStateInSenate());
+
+		aBill.introduceInSenate();
+		assertEquals("committeeConsiderationS", aBill.getBillStateInSenate());
+
+		aBill.royalAssent();
+		assertEquals("committeeConsiderationS", aBill.getBillStateInSenate());
+
+		aBill.modify();
+		assertEquals("committeeConsiderationS", aBill.getBillStateInSenate());
+
+	}
+	
+	@Test
+	public void testcase29() {
+		//Sneak Test
+		Bill aBill = new Bill();
+		assertEquals("inPreparation", aBill.getBillState());
+		aBill.introduceInSenate();
+		assertEquals("firstReadingS", aBill.getBillStateInSenate());
+		aBill.votePasses();
+		assertEquals("secondReadingS", aBill.getBillStateInSenate());
+		aBill.votePasses();
+		assertEquals("committeeConsiderationS", aBill.getBillStateInSenate());
+		aBill.votePasses();
+		assertEquals("thirdReadingS", aBill.getBillStateInSenate());
+		aBill.introduceInHouse();
+		assertEquals("thirdReadingS", aBill.getBillStateInSenate());
+
+		
+		aBill.introduceInSenate();
+		assertEquals("thirdReadingS", aBill.getBillStateInSenate());
+
+		aBill.royalAssent();
+		assertEquals("thirdReadingS", aBill.getBillStateInSenate());
+
+		aBill.modify();
+		assertEquals("thirdReadingS", aBill.getBillStateInSenate());
+
+	}
+	
+	
 }
