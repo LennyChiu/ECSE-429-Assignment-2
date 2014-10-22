@@ -1,9 +1,9 @@
-package bill;
+package correctedBill;
 
 /**
  * State machine of a bill in Canadian parliament
  */
-public class Bill
+public class CorrectedBill
 {
 
   //------------------------
@@ -25,7 +25,7 @@ public class Bill
   // CONSTRUCTOR
   //------------------------
 
-  public Bill()
+  public CorrectedBill()
   {
     isCommonsBill = true;
     setBillStateInHouseOfCommons(BillStateInHouseOfCommons.Null);
@@ -81,7 +81,7 @@ public class Bill
     switch (aBillState)
     {
       case inPreparation:
-        isCommonsBill = false;
+        //isCommonsBill = false;
         setBillState(BillState.inSenate);
         wasEventProcessed = true;
         break;
@@ -124,7 +124,9 @@ public class Bill
     switch (aBillState)
     {
       case inHouseOfCommons:
-        setBillStateInHouseOfCommons(BillStateInHouseOfCommons.secondReading);
+//        setBillStateInHouseOfCommons(BillStateInHouseOfCommons.secondReading);
+        exitBillState();
+    	  setBillState(BillState.withdrawn);
         wasEventProcessed = true;
         break;
       case inSenate:
@@ -279,7 +281,7 @@ public class Bill
         break;
       case committeeConsiderationS:
         setBillStateInSenate(BillStateInSenate.thirdReadingS);
-        isCommonsBill = true;
+        //isCommonsBill = true;
         wasEventProcessed = true;
         break;
       case thirdReadingS:

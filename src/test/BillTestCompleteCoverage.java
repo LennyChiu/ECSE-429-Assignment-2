@@ -8,13 +8,13 @@ import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
-import bill.Bill;
+import correctedBill.CorrectedBill;
 
 public class BillTestCompleteCoverage {
 
 	@Test
 	public void testcase1() {
-		Bill aBill = new Bill();
+		CorrectedBill aBill = new CorrectedBill();
 		boolean aIsCommonsBill = true;
 		aBill.setIsCommonsBill(aIsCommonsBill);
 		assertTrue(aBill.getIsCommonsBill());

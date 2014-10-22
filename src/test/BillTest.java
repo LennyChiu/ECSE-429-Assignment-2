@@ -8,7 +8,7 @@ import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
-import bill.Bill;
+import correctedBill.CorrectedBill;
 
 public class BillTest {
 
@@ -31,7 +31,7 @@ public class BillTest {
 	@Test
 	public void testcase1() {
 		//Conformance Test
-		Bill aBill = new Bill();
+		CorrectedBill aBill = new CorrectedBill();
 		assertEquals("inPreparation", aBill.getBillState());
 		aBill.introduceInHouse();
 		assertEquals("firstReading", aBill.getBillStateInHouseOfCommons());
@@ -62,7 +62,7 @@ public class BillTest {
 	@Test
 	public void testcase2() {
 		//Conformance Test
-		Bill aBill = new Bill();
+		CorrectedBill aBill = new CorrectedBill();
 		assertEquals("inPreparation", aBill.getBillState());
 		aBill.introduceInHouse();
 		assertEquals("firstReading", aBill.getBillStateInHouseOfCommons());
@@ -95,7 +95,7 @@ public class BillTest {
 	@Test
 	public void testcase3() {
 		//Conformance Test
-		Bill aBill = new Bill();
+		CorrectedBill aBill = new CorrectedBill();
 		assertEquals("inPreparation", aBill.getBillState());
 		aBill.introduceInHouse();
 		assertEquals("firstReading", aBill.getBillStateInHouseOfCommons());
@@ -108,7 +108,7 @@ public class BillTest {
 	@Test
 	public void testcase4() {
 		//Conformance Test
-		Bill aBill = new Bill();
+		CorrectedBill aBill = new CorrectedBill();
 		assertEquals("inPreparation", aBill.getBillState());
 		aBill.introduceInHouse();
 		assertEquals("firstReading", aBill.getBillStateInHouseOfCommons());
@@ -122,7 +122,7 @@ public class BillTest {
 	@Test
 	public void testcase5() {
 		//Conformance Test
-		Bill aBill = new Bill();
+		CorrectedBill aBill = new CorrectedBill();
 		assertEquals("inPreparation", aBill.getBillState());
 		aBill.introduceInHouse();
 		assertEquals("firstReading", aBill.getBillStateInHouseOfCommons());
@@ -137,7 +137,7 @@ public class BillTest {
 	@Test
 	public void testcase6() {
 		//Conformance Test
-		Bill aBill = new Bill();
+		CorrectedBill aBill = new CorrectedBill();
 		assertEquals("inPreparation", aBill.getBillState());
 		aBill.introduceInHouse();
 		assertEquals("firstReading", aBill.getBillStateInHouseOfCommons());
@@ -153,7 +153,7 @@ public class BillTest {
 	@Test
 	public void testcase7() {
 		//Conformance Test
-		Bill aBill = new Bill();
+		CorrectedBill aBill = new CorrectedBill();
 		assertEquals("inPreparation", aBill.getBillState());
 		aBill.introduceInHouse();
 		assertEquals("firstReading", aBill.getBillStateInHouseOfCommons());
@@ -170,7 +170,7 @@ public class BillTest {
 	@Test
 	public void testcase8() {
 		//Conformance Test
-		Bill aBill = new Bill();
+		CorrectedBill aBill = new CorrectedBill();
 		assertEquals("inPreparation", aBill.getBillState());
 		aBill.introduceInHouse();
 		assertEquals("firstReading", aBill.getBillStateInHouseOfCommons());
@@ -188,7 +188,7 @@ public class BillTest {
 	@Test
 	public void testcase9() {
 		//Conformance Test
-		Bill aBill = new Bill();
+		CorrectedBill aBill = new CorrectedBill();
 		assertEquals("inPreparation", aBill.getBillState());
 		aBill.introduceInHouse();
 		assertEquals("firstReading", aBill.getBillStateInHouseOfCommons());
@@ -205,7 +205,8 @@ public class BillTest {
 	@Test
 	public void testcase10() {
 		//Conformance Test
-		Bill aBill = new Bill();
+		CorrectedBill aBill = new CorrectedBill();
+		aBill.setIsCommonsBill(false);
 		assertEquals("inPreparation", aBill.getBillState());
 		aBill.introduceInHouse();
 		assertEquals("firstReading", aBill.getBillStateInHouseOfCommons());
@@ -225,7 +226,7 @@ public class BillTest {
 	@Test
 	public void testcase11() {
 		//Conformance Test
-		Bill aBill = new Bill();
+		CorrectedBill aBill = new CorrectedBill();
 		assertEquals("inPreparation", aBill.getBillState());
 		aBill.introduceInSenate();
 		assertEquals("firstReadingS", aBill.getBillStateInSenate());
@@ -236,7 +237,7 @@ public class BillTest {
 	@Test
 	public void testcase12() {
 		//Conformance Test
-		Bill aBill = new Bill();
+		CorrectedBill aBill = new CorrectedBill();
 		assertEquals("inPreparation", aBill.getBillState());
 		aBill.introduceInSenate();
 		assertEquals("firstReadingS", aBill.getBillStateInSenate());
@@ -247,7 +248,7 @@ public class BillTest {
 	@Test
 	public void testcase13() {
 		//Conformance Test
-		Bill aBill = new Bill();
+		CorrectedBill aBill = new CorrectedBill();
 		assertEquals("inPreparation", aBill.getBillState());
 		aBill.introduceInSenate();
 		assertEquals("firstReadingS", aBill.getBillStateInSenate());
@@ -260,7 +261,7 @@ public class BillTest {
 	@Test
 	public void testcase14() {
 		//Conformance Test
-		Bill aBill = new Bill();
+		CorrectedBill aBill = new CorrectedBill();
 		assertEquals("inPreparation", aBill.getBillState());
 		aBill.introduceInSenate();
 		assertEquals("firstReadingS", aBill.getBillStateInSenate());
@@ -273,7 +274,7 @@ public class BillTest {
 	@Test
 	public void testcase15() {
 		//Conformance Test
-		Bill aBill = new Bill();
+		CorrectedBill aBill = new CorrectedBill();
 		assertEquals("inPreparation", aBill.getBillState());
 		aBill.introduceInSenate();
 		assertEquals("firstReadingS", aBill.getBillStateInSenate());
@@ -287,7 +288,7 @@ public class BillTest {
 	@Test
 	public void testcase16() {
 		//Conformance Test
-		Bill aBill = new Bill();
+		CorrectedBill aBill = new CorrectedBill();
 		assertEquals("inPreparation", aBill.getBillState());
 		aBill.introduceInSenate();
 		assertEquals("firstReadingS", aBill.getBillStateInSenate());
@@ -301,7 +302,7 @@ public class BillTest {
 	@Test
 	public void testcase17() {
 		//Conformance Test
-		Bill aBill = new Bill();
+		CorrectedBill aBill = new CorrectedBill();
 		assertEquals("inPreparation", aBill.getBillState());
 		aBill.introduceInSenate();
 		assertEquals("firstReadingS", aBill.getBillStateInSenate());
@@ -319,7 +320,7 @@ public class BillTest {
 	@Test
 	public void testcase18() {
 		//Conformance Test
-		Bill aBill = new Bill();
+		CorrectedBill aBill = new CorrectedBill();
 		assertEquals("inPreparation", aBill.getBillState());
 		aBill.introduceInSenate();
 		assertEquals("firstReadingS", aBill.getBillStateInSenate());
@@ -336,7 +337,8 @@ public class BillTest {
 	@Test
 	public void testcase19() {
 		//Conformance Test
-		Bill aBill = new Bill();
+		CorrectedBill aBill = new CorrectedBill();
+		aBill.setIsCommonsBill(false);
 		assertEquals("inPreparation", aBill.getBillState());
 		aBill.introduceInSenate();
 		assertEquals("firstReadingS", aBill.getBillStateInSenate());
@@ -348,13 +350,13 @@ public class BillTest {
 		assertEquals("thirdReadingS", aBill.getBillStateInSenate());
 		aBill.votePasses();
 		//error
-		assertEquals("firstReading", aBill.getBillState());
+		assertEquals("firstReading", aBill.getBillStateInHouseOfCommons());
 
 	}
 	@Test
 	public void testcase20() {
 		//Conformance Test
-		Bill aBill = new Bill();
+		CorrectedBill aBill = new CorrectedBill();
 		assertEquals("inPreparation", aBill.getBillState());
 		aBill.introduceInSenate();
 		assertEquals("firstReadingS", aBill.getBillStateInSenate());
@@ -372,7 +374,7 @@ public class BillTest {
 	@Test
 	public void testcase21() {
 		//Sneak Test
-		Bill aBill = new Bill();
+		CorrectedBill aBill = new CorrectedBill();
 		assertEquals("inPreparation", aBill.getBillState());
 		aBill.introduceInHouse();
 		assertEquals("firstReading", aBill.getBillStateInHouseOfCommons());
@@ -394,7 +396,7 @@ public class BillTest {
 	@Test
 	public void testcase22() {
 		//Sneak Test
-		Bill aBill = new Bill();
+		CorrectedBill aBill = new CorrectedBill();
 		assertEquals("inPreparation", aBill.getBillState());
 		aBill.introduceInHouse();
 		assertEquals("firstReading", aBill.getBillStateInHouseOfCommons());
@@ -416,7 +418,7 @@ public class BillTest {
 	@Test
 	public void testcase23() {
 		//Sneak Test
-		Bill aBill = new Bill();
+		CorrectedBill aBill = new CorrectedBill();
 		assertEquals("inPreparation", aBill.getBillState());
 		aBill.introduceInHouse();
 		assertEquals("firstReading", aBill.getBillStateInHouseOfCommons());
@@ -439,7 +441,7 @@ public class BillTest {
 	@Test
 	public void testcase24() {
 		//Sneak Test
-		Bill aBill = new Bill();
+		CorrectedBill aBill = new CorrectedBill();
 		assertEquals("inPreparation", aBill.getBillState());
 		aBill.introduceInHouse();
 		assertEquals("firstReading", aBill.getBillStateInHouseOfCommons());
@@ -464,7 +466,8 @@ public class BillTest {
 	@Test
 	public void testcase25() {
 		//Sneak Test
-		Bill aBill = new Bill();
+		CorrectedBill aBill = new CorrectedBill();
+		aBill.setIsCommonsBill(false);
 		assertEquals("inPreparation", aBill.getBillState());
 		aBill.introduceInHouse();
 		assertEquals("firstReading", aBill.getBillStateInHouseOfCommons());
@@ -475,32 +478,32 @@ public class BillTest {
 		aBill.votePasses();
 		assertEquals("thirdReading", aBill.getBillStateInHouseOfCommons());
 		aBill.votePasses();
-		assertEquals("awaitingRoyalAssent", aBill.getBillStateInHouseOfCommons());
+		assertEquals("awaitingRoyalAssent", aBill.getBillState());
 
 		aBill.votePasses();
-		assertEquals("awaitingRoyalAssent", aBill.getBillStateInHouseOfCommons());
+		assertEquals("awaitingRoyalAssent", aBill.getBillState());
 		
 		aBill.voteFails();
-		assertEquals("awaitingRoyalAssent", aBill.getBillStateInHouseOfCommons());
+		assertEquals("awaitingRoyalAssent", aBill.getBillState());
 
 		aBill.withdraw();
-		assertEquals("awaitingRoyalAssent", aBill.getBillStateInHouseOfCommons());
+		assertEquals("awaitingRoyalAssent", aBill.getBillState());
 
 		aBill.introduceInHouse();
-		assertEquals("awaitingRoyalAssent", aBill.getBillStateInHouseOfCommons());
+		assertEquals("awaitingRoyalAssent", aBill.getBillState());
 
 		aBill.introduceInSenate();
-		assertEquals("awaitingRoyalAssent", aBill.getBillStateInHouseOfCommons());
+		assertEquals("awaitingRoyalAssent", aBill.getBillState());
 
 		aBill.modify();
-		assertEquals("awaitingRoyalAssent", aBill.getBillStateInHouseOfCommons());
+		assertEquals("awaitingRoyalAssent", aBill.getBillState());
 
 	}
 	
 	@Test
 	public void testcase26() {
 		//Sneak Test
-		Bill aBill = new Bill();
+		CorrectedBill aBill = new CorrectedBill();
 		assertEquals("inPreparation", aBill.getBillState());
 		aBill.introduceInSenate();
 		assertEquals("firstReadingS", aBill.getBillStateInSenate());
@@ -521,7 +524,7 @@ public class BillTest {
 	@Test
 	public void testcase27() {
 		//Sneak Test
-		Bill aBill = new Bill();
+		CorrectedBill aBill = new CorrectedBill();
 		assertEquals("inPreparation", aBill.getBillState());
 		aBill.introduceInSenate();
 		assertEquals("firstReadingS", aBill.getBillStateInSenate());
@@ -544,7 +547,7 @@ public class BillTest {
 	@Test
 	public void testcase28() {
 		//Sneak Test
-		Bill aBill = new Bill();
+		CorrectedBill aBill = new CorrectedBill();
 		assertEquals("inPreparation", aBill.getBillState());
 		aBill.introduceInSenate();
 		assertEquals("firstReadingS", aBill.getBillStateInSenate());
@@ -569,7 +572,7 @@ public class BillTest {
 	@Test
 	public void testcase29() {
 		//Sneak Test
-		Bill aBill = new Bill();
+		CorrectedBill aBill = new CorrectedBill();
 		assertEquals("inPreparation", aBill.getBillState());
 		aBill.introduceInSenate();
 		assertEquals("firstReadingS", aBill.getBillStateInSenate());
